@@ -158,3 +158,8 @@ SATA/AHCI
 Deshalb wird sie mit QEMU über OVMF und IDE/AHCI-kompatiblem Disk-Modus gestartet.
 
 virtio wäre schneller, kann aber bei einer übernommenen Windows-Installation zu Bootproblemen führen, wenn die passenden Treiber noch nicht installiert sind.
+
+
+GRAFIKKARTE:
+
+https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/archive-virtio/virtio-win-0.1.285-1/

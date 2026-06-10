@@ -91,6 +91,7 @@ Wiederherstellen:
 
 cp EV3/REV3_WS20262027.backup.qcow2 EV3/REV3_WS20262027.qcow2
 cp EV3/REV3_WS20262027.backup.nvram EV3/REV3_WS20262027.nvram
+
 VirtualBox-Image zu qcow2 konvertieren
 VDI zu qcow2
 qemu-img convert -f vdi -O qcow2 REV3_WS20262027.vdi REV3_WS20262027.qcow2
@@ -102,6 +103,8 @@ tar -xvf vm.ova
 Danach liegt meistens eine .vmdk-Datei vor:
 
 qemu-img convert -f vmdk -O qcow2 disk.vmdk disk.qcow2
+
+
 VirtualBox-NVRAM verwenden
 
 Wenn die VirtualBox-VM EFI verwendet, gibt es oft eine .nvram-Datei.
@@ -113,8 +116,11 @@ Diese kann in QEMU als beschreibbarer pflash-Speicher verwendet werden:
 Die UEFI-Firmware selbst kommt von OVMF:
 
 -drive if=pflash,format=raw,readonly=on,file=/nix/store/.../OVMF_CODE.fd
+
 ISO einbinden
+
 Windows- oder Linux-ISO booten
+
 qemu-system-x86_64 \
   -enable-kvm \
   -machine q35 \
@@ -123,7 +129,9 @@ qemu-system-x86_64 \
   -cdrom installer.iso \
   -boot d \
   -drive file=disk.qcow2,format=qcow2,if=ide
+
 ISO zusätzlich zur bestehenden VM einbinden
+
 qemu-system-x86_64 \
   -enable-kvm \
   -machine q35 \
@@ -133,8 +141,11 @@ qemu-system-x86_64 \
   -drive if=pflash,format=raw,file=EV3/REV3_WS20262027.nvram \
   -drive file=EV3/REV3_WS20262027.qcow2,format=qcow2,if=ide \
   -cdrom pfad/zur/datei.iso
+
 Neue leere qcow2-Disk erstellen
+
 qemu-img create -f qcow2 disk.qcow2 80G
+
 Wichtige Hinweise
 
 Diese VM stammt aus VirtualBox und verwendet:

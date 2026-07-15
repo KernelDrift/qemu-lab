@@ -9,4 +9,5 @@ qemu-system-x86_64 \
     -smp 4 \
     -device virtio-vga \
     -drive file=win/windows.qcow2,format=qcow2,if=ide \
-    -boot order=c
+    -boot order=c \
+    -display gtk,full-screen=on

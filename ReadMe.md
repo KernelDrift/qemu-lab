@@ -30,3 +30,49 @@
 
 No additional VirtIO drivers are required, as they are already included in the Linux kernel.
 
+---
+
+## Onion (Whonix)
+
+1. Download the official Whonix KVM package:
+   https://www.whonix.org/wiki/KVM
+
+2. Extract the archive into the `onion/` directory.
+
+3. Enable libvirt on your host.
+
+4. Adjust the image paths in:
+   - `Whonix-Gateway.xml`
+   - `Whonix-Workstation.xml`
+
+5. Import the Whonix networks:
+
+```bash
+sudo virsh net-define Whonix_external_network.xml
+sudo virsh net-define Whonix_internal_network.xml
+
+sudo virsh net-autostart Whonix-External
+sudo virsh net-autostart Whonix-Internal
+
+sudo virsh net-start Whonix-External
+sudo virsh net-start Whonix-Internal
+```
+
+6. Import the virtual machines:
+
+```bash
+sudo virsh define Whonix-Gateway.xml
+sudo virsh define Whonix-Workstation.xml
+```
+
+7. Start Whonix:
+
+```bash
+./onion-run.sh
+```
+
+To stop both VMs:
+
+```bash
+./onion-stop.sh
+```

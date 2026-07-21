@@ -32,7 +32,7 @@ No additional VirtIO drivers are required, as they are already included in the L
 
 ---
 
-## Onion (Whonix)
+## ~~Onion (Whonix)~~
 
 1. Download the official Whonix KVM package:
    https://www.whonix.org/wiki/KVM

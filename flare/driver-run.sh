@@ -1,0 +1,12 @@
+qemu-system-x86_64 \
+    -enable-kvm \
+    -machine q35 \
+    -cpu host \
+    -m 8G \
+    -smp 4 \
+    -vga std \
+    -device ich9-ahci,id=sata \
+    -drive file=windows.qcow2,format=qcow2,if=none,id=windows_disk \
+    -device ide-hd,drive=windows_disk,bus=sata.2 \
+    -drive file=virtio-win-0.1.285.iso,media=cdrom \
+    -boot order=c

@@ -1,6 +1,8 @@
-OVMF_DIR="$(nix-build '<nixpkgs>' -A OVMF.fd --no-out-link)/FV"
-OVMF_CODE="$OVMF_DIR/OVMF_CODE.fd"
-
+#for nix
+#OVMF_DIR="$(nix-build '<nixpkgs>' -A OVMF.fd --no-out-link)/FV"
+#OVMF_CODE="$OVMF_DIR/OVMF_CODE.fd"
+#normal linux
+OVMF_CODE="/usr/share/OVMF/OVMF_CODE_4M.fd"
 
 qemu-system-x86_64 \
     -enable-kvm \

@@ -10,4 +10,4 @@ qemu-system-x86_64 \
     -device virtio-vga \
     -drive file=flare/windows.qcow2,format=qcow2,if=ide \
     -boot order=c \
-    -display gtk,full-screen=on
+    -display gtk

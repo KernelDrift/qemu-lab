@@ -32,6 +32,23 @@ No additional VirtIO drivers are required, as they are already included in the L
 
 ---
 
+## REV (WIN) OS
+
+1. Download the Version from the Sharepoint:
+   - Link in the Sheets
+
+2. Place all Files of the folder in the `rev/` directory.
+
+3. Run qemu-img convert -f vdi -O qcow2 /path/to/source.vdi /path/to/destination.qcow2.
+
+4. Use rev-run.sh to start the win normall.
+
+No additional VirtIO drivers are required, as they are already included in the Linux kernel.
+
+
+
+---
+
 ## ~~Onion (Whonix)~~
 
 1. Download the official Whonix KVM package:

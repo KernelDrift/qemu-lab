@@ -2,3 +2,7 @@ VM/*
 Win11*
 *.qcow2
 *.iso
+*.vdi
+*.nvram
+*.vbox
+*.vbox-prev

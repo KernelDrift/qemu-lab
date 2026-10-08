@@ -22,3 +22,4 @@ qemu-system-x86_64 \
     -drive file=kali/kali.qcow2,format=qcow2,if=virtio \
     -boot order=c \
     -display gtk,full-screen=on,zoom-to-fit=on,gl=off
+    -virtfs local,path="kali/share",mount_tag=hostshare,security_model=none,readonly=on

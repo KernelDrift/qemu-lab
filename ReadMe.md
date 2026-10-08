@@ -45,6 +45,20 @@ No additional VirtIO drivers are required, as they are already included in the L
 
 No additional VirtIO drivers are required, as they are already included in the Linux kernel.
 
+---
+
+## Kali OS
+
+1. Download https://www.kali.org/get-kali/#kali-virtual-machines from the official Website
+
+2. Place all Files of the folder in the `kali/` directory.
+
+3. Run 7z x file.
+
+4. Use kali-run.sh to start the kali normall.
+
+No additional VirtIO drivers are required, as they are already included in the Linux kernel.
+
 
 
 ---

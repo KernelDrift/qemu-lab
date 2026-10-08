@@ -8,6 +8,7 @@ qemu-system-x86_64 \
     -m 8G \
     -smp 4 \
     -device virtio-vga \
+    -device usb-tablet \
     -drive file=flare/windows.qcow2,format=qcow2,if=ide \
     -boot order=c \
     -display gtk
